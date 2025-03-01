@@ -2,11 +2,10 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>TESTPYL</title>
+  <title>TESTPYL YOUPPI 2</title>
   <script src="https://apis.google.com/js/api.js"></script>
   <script>
     var CLIENT_ID = '1076564775870-mk83opo3aoj75oa0k8q2ianhbvorct5g.apps.googleusercontent.com';
-    var API_KEY = 'VOTRE_API_KEY';
     var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
     var SCOPES = "https://www.googleapis.com/auth/spreadsheets.readonly";
 
@@ -16,7 +15,6 @@
 
     function initClient() {
       gapi.client.init({
-        apiKey: API_KEY,
         clientId: CLIENT_ID,
         discoveryDocs: DISCOVERY_DOCS,
         scope: SCOPES
@@ -32,7 +30,7 @@
     }
 
     function listValues() {
-      var spreadsheetId = 'VOTRE_SPREADSHEET_ID';
+      var spreadsheetId = '1IBZCayCU8YA98ZhsfY0ZkJX5dGoCbRIx2R3RKKvnzGc';
       var range = 'Sheet1!A1:D10';
       gapi.client.sheets.spreadsheets.values.get({
         spreadsheetId: spreadsheetId,
