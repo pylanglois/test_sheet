@@ -2,10 +2,9 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <title>Google Sheets Single Page App</title>
+  <title>Ma SPA avec Google Sheets</title>
   <script src="https://apis.google.com/js/api.js"></script>
   <script>
-    // Remplacez par vos identifiants et informations
     var CLIENT_ID = 'VOTRE_CLIENT_ID.apps.googleusercontent.com';
     var API_KEY = 'VOTRE_API_KEY';
     var DISCOVERY_DOCS = ["https://sheets.googleapis.com/$discovery/rest?version=v4"];
@@ -22,7 +21,6 @@
         discoveryDocs: DISCOVERY_DOCS,
         scope: SCOPES
       }).then(function () {
-        // Vérifier si l'utilisateur est déjà connecté
         if (!gapi.auth2.getAuthInstance().isSignedIn.get()) {
           gapi.auth2.getAuthInstance().signIn().then(listValues);
         } else {
@@ -34,7 +32,6 @@
     }
 
     function listValues() {
-      // Remplacez par votre ID de feuille de calcul et la plage souhaitée
       var spreadsheetId = 'VOTRE_SPREADSHEET_ID';
       var range = 'Sheet1!A1:D10';
       gapi.client.sheets.spreadsheets.values.get({
@@ -63,7 +60,7 @@
   </script>
 </head>
 <body onload="handleClientLoad()">
-  <h1>Données de ma feuille Google Sheets</h1>
-  <div id="content">Chargement...</div>
+<h1>Données de ma feuille Google Sheets</h1>
+<div id="content">Chargement...</div>
 </body>
 </html>
